@@ -12,27 +12,12 @@ import { FeedbackProvider } from './context/FeedbackContext';
 const App = () => {
 	return (
 		<FeedbackProvider>
-			<Router>
-				<Header text="Hello World!" />
-				<div className="container">
-					<Routes>
-						<Route
-							exact
-							path="/"
-							element={
-								<>
-									<FeedbackForm />
-									<FeedbackStats />
-									<FeedbackList />
-								</>
-							}
-						></Route>
-
-						<Route exact path="/about" element={<AboutPage />} />
-					</Routes>
-					<AboutIconLink />
-				</div>
-			</Router>
+			<Header text="Hello World!" />
+			<div className="container">
+				<FeedbackForm />
+				<FeedbackStats />
+				<FeedbackList />
+			</div>
 		</FeedbackProvider>
 	);
 };
